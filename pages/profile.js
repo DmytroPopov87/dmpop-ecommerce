@@ -29,7 +29,7 @@ export default function Profile({ user, orders }) {
             <button onClick={() => route.push("api/auth/logout")}>  Logout</button>
           </LogoutBtn>
           {orders.map((order) => (
-            <Order>
+            <Order key={order.id}>
               <h1>Order Number: <span>{order.id}</span> </h1>
               <h2>Amount: <span>{ formatMoney(order.amount) }</span> </h2>
               <h2>Receipt Email: <span>{user.email}</span> </h2>
