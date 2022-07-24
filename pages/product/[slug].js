@@ -15,7 +15,10 @@ export default function ProductDetails() {
 
   //reset qty after adding item to cart
   useEffect(() => {
+
     setQty(1);
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); 
 
   //create a toast
